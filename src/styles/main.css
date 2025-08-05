@@ -1,0 +1,42 @@
+:root {
+  --bg: #fafafa;
+  --un-prose-links: #262626;
+  --fg: #262626;
+  --accent: #d4d4d4;
+  --c-scrollbar: #eee;
+  --c-scrollbar-hover: #bbb;
+}
+
+
+html.dark {
+    --bg: #0a0a0a;
+    --fg: #e5e5e5
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+nav, footer {
+    color: #525252;
+}
+nav a:hover, footer a:hover{
+    color: #171717;
+}
+
+.section-heading {
+    color: #737373;
+}
+
+.icon {
+    background-color: #525252 !important;
+}
+a:hover .icon {
+    background-color: #171717 !important;
+}
+
+.prose :where(a):not(:where(.not-prose,.not-prose *)) {
+    font-weight: 400 !important;
+}
+

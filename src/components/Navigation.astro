@@ -1,0 +1,60 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+    { href: "/", text: "Home" },
+    { href: "/about", text: "About" },
+    { href: "/portfolio", text: "Portfolio" },
+    { href: "/blog", text: "Blog" },
+];
+
+const iconMenu = [
+    { href: "https://bsky.app/profile/yourhandle.bsky.social", icon: "i-ri-bluesky-line", label: "BlueSky" },
+    { href: "https://github.com/yourusername", icon: "i-ri-github-line", label: "Github" },
+    { href: "/rss.xml", icon: "i-ri-rss-line", label: "RSS Feed" },
+    { icon: "i-ri-moon-line", label: "Dark Mode" },
+]
+---
+
+<header class="flex items-center justify-center p-8">
+    <a href="/" class="font-cursive text-4xl">agh</a>
+    <nav class="ml-auto">
+        <ul class="flex gap-5">
+            {navLinks.map(({ href, text }) => (
+                <li class="relative"> {/* Add relative positioning to the list item */}
+                <a href={href} class="block"> {/* Make the anchor a block element for the line to span */}
+                    {text}
+                </a>
+                {currentPath === href && (
+                    <div class="absolute bottom-0 left-0 w-full h-[1px] bg-[var(--accent)] translate-y-1"></div>
+                )}
+            </li>
+            ))}
+        </ul>
+    </nav>
+    <ul
+        class="flex border-l border-[var(--accent)] items-center pl-4 ml-5 gap-4 h-4"
+    >
+        {iconMenu.map(({ href, icon, label }) => (
+        <li>
+            {href ? (
+                // Renders an anchor tag if href exists
+                <a
+                    href={href}
+                    aria-label={label}
+                >
+                    <div class={`icon ${icon}`}></div>
+                </a>
+            ) : (
+                // Renders a button if href does NOT exist
+                <button
+                    aria-label={label}
+                >
+                    <div class={`icon ${icon}`}></div>
+                </button>
+            )}
+        </li>
+    ))}
+    </ul>
+    
+</header>
