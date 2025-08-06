@@ -1,7 +1,7 @@
 ---
-title: "Post 2"
+title: "How to Train Your Dog to Fly You to The Market"
 description: "Lorem ipsum"
-pubDate: "Jul 08 2025"
+pubDate: "Jul 31 2025"
 tags:
   - "tag 2"
 ---

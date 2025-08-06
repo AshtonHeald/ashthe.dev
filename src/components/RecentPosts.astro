@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import { formatDate } from '@/utils/formatDate';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const recentPosts = posts.slice(0, 3);
+---
+
+
+<ul class="space-y-6 list-none pl-0">
+  {recentPosts.map(post => (
+    <li>
+      <a class="no-underline flex justify-between hover:text-[var(--soft-tes)]" href={`/blog/${post.id}`}>
+      <span>
+
+      {post.data.title}
+      </span>
+      <span class="font-mono date"> {formatDate(post.data.pubDate, { month: true, year: true })}</span>
+      </a>
+      </li>
+  ))}
+</ul>

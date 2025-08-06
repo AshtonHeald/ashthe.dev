@@ -1,7 +1,7 @@
 ---
-title: "First post"
+title: "How to Shave Your Cat When Your Dog's Watching?"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2025"
+pubDate: "Jul 25 2025"
 updatedDate: "Jul 23 2025"
 tags:
   - "performance"
