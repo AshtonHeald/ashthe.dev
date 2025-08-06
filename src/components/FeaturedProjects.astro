@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+
+const projects = ( await getCollection('projects'))
+  .filter(p => p.data.featured)
+  .sort((a, b) => Number(b.data.year) - Number(a.data.year))
+  .slice(0, 3);
+---
+
+
+<ul class="space-y-6 list-none pl-0">
+  {projects.map(project => (
+    <li>
+      <a
+        class="no-underline hover:text-[var(--soft-text)]"
+        href={`/portfolio/${project.id}`}
+      >
+        <div>
+        <span>{project.data.title}</span>
+        <div class="text-sm">{project.data.description}</div>
+        </div>
+
+      </a>
+    </li>
+  ))}
+</ul>
