@@ -12,6 +12,7 @@
     "@astrojs/mdx": "^4.3.3",
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/vue": "^5.1.0",
+    "@vueuse/core": "^13.6.0",
     "astro": "^5.12.8",
     "vue": "^3.5.18"
   },
