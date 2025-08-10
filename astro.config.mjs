@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import { remarkReadingTime } from "./remark-reading-time.mjs";
 
 import vue from "@astrojs/vue";
 import partytown from "@astrojs/partytown";
@@ -12,12 +13,15 @@ import UnoCSS from "unocss/astro";
 export default defineConfig({
   site: "https://ashthe.dev",
   base: "/",
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
   integrations: [
     UnoCSS({
-      injectReset: true
+      injectReset: true,
     }),
-    vue(), 
-    partytown(), 
-    mdx(), 
+    vue(),
+    partytown(),
+    mdx(),
   ],
 });

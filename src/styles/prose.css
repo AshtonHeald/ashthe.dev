@@ -38,12 +38,15 @@
 .prose a {
   font-weight: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
   transition: border 0.25s ease-in-out;
 }
 
 .prose a:hover {
-  border-bottom: 1px solid var(--foreground);
+  border-color: var(--foreground);
+}
+.prose .arrow-link a:hover {
+  border-color: var(--border);
 }
 
 .prose a code {

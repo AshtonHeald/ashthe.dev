@@ -23,6 +23,7 @@ const posts = defineCollection({
       description: z.string().optional(),
       pubDate: z.coerce.date(),
       tags: z.array(z.string()).optional(),
+      minutesRead: z.string().optional(),
     }),
 });
 
@@ -37,6 +38,7 @@ const projects = defineCollection({
       description: z.string(),
       featured: z.boolean().default(false),
       year: z.union([z.string(), z.number()]),
+      collection: z.string(),
     }),
 });
 

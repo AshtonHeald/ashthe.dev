@@ -1,13 +1,16 @@
 ---
 title: Pokémon Viewer
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+status: archived
+year: 2024
+
+collection: Web Apps
+featured: true
+
 cover:
   url: src/assets/placeholder.png
   alt: "A placeholder image"
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 techstack: ["Svelte"]
-status: archived
-year: 2024
-featured: true
 ---
 
 lorem ipsum
