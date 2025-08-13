@@ -3,10 +3,10 @@ import ToggleTheme from "./ToggleTheme.vue";
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
-  { href: "/", text: "Home" },
-  { href: "/about", text: "About" },
-  { href: "/work", text: "Work" },
-  { href: "/writing", text: "Writing" },
+  { href: "/", text: "Home", icon: "home-4-line" },
+  { href: "/about", text: "About", icon: "user-line" },
+  { href: "/work", text: "Work", icon: "folder-2-line" },
+  { href: "/writing", text: "Writing", icon: "pages-line" },
 ];
 
 const iconMenu = [
@@ -25,7 +25,7 @@ const iconMenu = [
 ---
 
 <header class="flex items-center justify-center p-8">
-  <a href="/" class="font-cursive text-foreground text-4xl">agh</a>
+  <a href="/" class="font-cursive text-accent-foreground text-4xl">agh</a>
   <nav class="ml-auto">
     <ul class="flex gap-5">
       {

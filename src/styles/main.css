@@ -14,6 +14,11 @@
   --border: #d4d4d4;
   --input: #d4d4d4;
   --ring: #a3a3a3;
+
+  --font-sans: var(--font-inter), serif !important;
+  --font-serif: var(--font-playfair-display), serif !important;
+  --font-mono: var(--font-roboto-mono), monospace !important;
+  --font-cursive: var(--font-sacramento), cursive !important;
 }
 html.dark {
   --background: #0a0a0a;
@@ -31,6 +36,9 @@ html.dark {
   --ring: #525252;
 }
 
+.font-cursive {
+  font-family: var(--font-cursive);
+}
 nav,
 footer {
   color: var(--accent-foreground);

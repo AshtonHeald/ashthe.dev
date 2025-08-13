@@ -1,6 +1,5 @@
 import presetWind4 from "@unocss/preset-wind4";
-import { createLocalFontProcessor } from "@unocss/preset-web-fonts/local";
-import { presetIcons, presetWebFonts, transformerDirectives } from "unocss";
+import { presetIcons, transformerDirectives } from "unocss";
 import { defineConfig } from "unocss";
 
 export default defineConfig({
@@ -44,16 +43,6 @@ export default defineConfig({
       },
     }),
     presetIcons(),
-    presetWebFonts({
-      provider: "fontsource",
-      fonts: {
-        sans: "Inter",
-        serif: "Playfair Display",
-        mono: "Roboto Mono",
-        cursive: "Sacramento",
-      },
-      processors: createLocalFontProcessor(),
-    }),
   ],
   transformers: [transformerDirectives()],
 });

@@ -4,6 +4,7 @@
 
 //import FallbackImage from "../assets/blog-placeholder-1.jpg";
 import type { ImageMetadata } from "astro";
+import { Font } from "astro:assets";
 
 interface Props {
   title: string;
@@ -17,7 +18,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image } = Astro.props;
 
-import { ClientRouter } from "astro:transitions";
+//import { ClientRouter } from "astro:transitions";
 ---
 
 <!-- Global Metadata -->
@@ -44,7 +45,7 @@ import { ClientRouter } from "astro:transitions";
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<ClientRouter />
+<!-- <ClientRouter />-->
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -59,3 +60,8 @@ import { ClientRouter } from "astro:transitions";
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <!-- <meta property="twitter:image" content={new URL(image.src, Astro.url)} />-->
+
+<Font cssVariable="--font-inter" preload />
+<Font cssVariable="--font-playfair-display" preload />
+<Font cssVariable="--font-roboto-mono" preload />
+<Font cssVariable="--font-sacramento" preload />
