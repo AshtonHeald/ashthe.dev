@@ -34,11 +34,15 @@ const projects = defineCollection({
   }),
   schema: () =>
     z.object({
-      title: z.string(),
-      description: z.string(),
-      featured: z.boolean().default(false),
+      feat: z.boolean().default(false),
+      name: z.string(),
+      desc: z.string(),
       year: z.union([z.string(), z.number()]),
-      collection: z.string(),
+      stat: z.string(),
+      coll: z.string(),
+      tech: z.array(z.string()),
+      repo: z.string().optional(),
+      demo: z.string().optional(),
     }),
 });
 

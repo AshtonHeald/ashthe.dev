@@ -18,7 +18,8 @@
   line-height: 1.25;
 }
 .prose h1 {
-  margin: 1rem 0;
+  margin-top: 0;
+  margin-bottom: 0.8888889em;
   font-size: 2.25em;
 }
 .prose h2 {
@@ -58,7 +59,7 @@
 .prose ul,
 .prose ol,
 .prose pre {
-  margin: 1em 0;
+  margin: 10px 0;
   line-height: 1.75;
 }
 .prose blockquote {
@@ -71,7 +72,18 @@
 .prose img,
 .prose video {
   max-width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
 }
+
+p:has(img) {
+  margin-bottom: 0.25rem !important;
+}
+
+.prose small {
+  color: var(--accent-foreground);
+}
+
 .prose figure,
 .prose picture {
   margin: 1em 0;

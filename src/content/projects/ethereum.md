@@ -1,15 +1,11 @@
 ---
-title: Ethereum MVP
+feat: true
+name: Ethereum MVP
+desc: Lorem Ipsum
 year: 2025
-featured: true
-collection: Landing Pages
-
-cover:
-  url: https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png
-  alt: "A placeholder image"
-description: Lorem Ipsum
-techstack: ["HTML", "CSS", "JS", "Bootstrap"]
-status: archived
+coll: Landing Pages
+tech: ["HTML", "CSS", "JS", "Bootstrap"]
+stat: archived
 ---
 
 lorem ipsum

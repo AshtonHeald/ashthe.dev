@@ -1,0 +1,51 @@
+---
+const { pathname } = Astro.url;
+const { disabled = [] } = Astro.props;
+
+const segments = pathname
+  .split("/")
+  .filter(Boolean)
+  .map((seg, index, arr) => {
+    const href = "/" + arr.slice(0, index + 1).join("/");
+    return {
+      raw: seg,
+      label: formatLabel(seg),
+      href,
+    };
+  });
+
+function formatLabel(str) {
+  return str.replace(/[-_]/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+---
+
+<nav class="mb-6 text-sm">
+  <ul
+    class="text-muted-foreground flex !list-none flex-wrap items-center gap-2 !pl-0"
+  >
+    {
+      segments.map((seg, i) => {
+        const isLast = i === segments.length - 1;
+        const isDisabled = disabled.includes(seg.raw.toLowerCase());
+
+        return (
+          <>
+            <li>
+              {isLast ? (
+                <span class="text-foreground font-medium">{seg.label}</span>
+              ) : isDisabled ? (
+                <span class="text-muted-foreground select-none">. . .</span>
+              ) : (
+                <a href={seg.href}>{seg.label}</a>
+              )}
+            </li>
+
+            {!isLast && (
+              <li class="text-muted-foreground mx-1 select-none">›</li>
+            )}
+          </>
+        );
+      })
+    }
+  </ul>
+</nav>

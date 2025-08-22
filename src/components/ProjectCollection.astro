@@ -7,7 +7,7 @@ const { collectionFilter } = Astro.props;
 <ul class="!list-none space-y-4 !pl-0">
   {
     allProjects
-      .filter((p) => p.data.collection === collectionFilter)
+      .filter((p) => p.data.coll === collectionFilter)
       .sort((a, b) => Number(b.data.year) - Number(a.data.year))
       .map((project) => (
         <li>
@@ -16,9 +16,9 @@ const { collectionFilter } = Astro.props;
             href={`/portfolio/${project.id}`}
           >
             <div>
-              <span>{project.data.title}</span>
+              <span>{project.data.name}</span>
               <div class="text-accent-foreground text-sm">
-                {project.data.description}
+                {project.data.desc}
               </div>
             </div>
           </a>

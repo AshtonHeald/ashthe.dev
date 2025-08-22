@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 
 const projects = (await getCollection("projects"))
-  .filter((p) => p.data.featured)
+  .filter((p) => p.data.feat)
   .sort((a, b) => Number(b.data.year) - Number(a.data.year))
   .slice(0, 3);
 ---
@@ -15,12 +15,8 @@ const projects = (await getCollection("projects"))
           class="!border-b-0 !transition-all hover:opacity-60"
           href={`/portfolio/${project.id}`}
         >
-          <div>
-            <span>{project.data.title}</span>
-            <div class="text-accent-foreground text-sm">
-              {project.data.description}
-            </div>
-          </div>
+          <span>{project.data.name}</span>
+          <div class="text-accent-foreground text-sm">{project.data.desc}</div>
         </a>
       </li>
     ))

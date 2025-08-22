@@ -14,7 +14,7 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 ---
 
 <MainLayout>
-  <article class="prose">
+  <article class="prose mx-auto">
     <h1>{post.data.title}</h1>
     <p>{remarkPluginFrontmatter.minutesRead}</p>
     <Content />
