@@ -1,23 +1,23 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import { getCollection, render } from 'astro:content';
+import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
-  const pages = await getCollection('pages');
-  return pages.map((page) => ({
-    params: { 
-      page: page.id 
-    },
-    props: { page }
-  }));
+    const pages = await getCollection("pages");
+    return pages.map((page) => ({
+        params: {
+            page: page.id,
+        },
+        props: { page },
+    }));
 }
 
 const { page } = Astro.props;
 const { Content } = await render(page);
 ---
 
-<MainLayout >
-  <article class="prose mx-auto">
-    <Content />
-  </article>
+<MainLayout>
+    <article class="prose mx-auto">
+        <Content />
+    </article>
 </MainLayout>

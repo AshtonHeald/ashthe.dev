@@ -1,31 +1,33 @@
 {
-  "name": "ashthedev",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^4.3.3",
-    "@astrojs/partytown": "^2.1.4",
-    "@astrojs/vue": "^5.1.0",
-    "@vueuse/core": "^13.6.0",
-    "astro": "^5.12.8",
-    "nprogress": "^0.2.0",
-    "sharp": "^0.34.3",
-    "vue": "^3.5.18"
-  },
-  "devDependencies": {
-    "@iconify-json/ri": "^1.2.5",
-    "@unocss/preset-web-fonts": "^66.4.0",
-    "@unocss/preset-wind4": "^66.3.3",
-    "@unocss/reset": "^66.4.0",
-    "prettier": "3.6.2",
-    "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.14",
-    "unocss": "^66.3.3"
-  }
+    "name": "ashthedev",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^4.3.3",
+        "@astrojs/partytown": "^2.1.4",
+        "@astrojs/vue": "^5.1.0",
+        "@vueuse/core": "^13.6.0",
+        "astro": "^5.12.8",
+        "nprogress": "^0.2.0",
+        "sharp": "^0.34.3",
+        "vue": "^3.5.18"
+    },
+    "devDependencies": {
+        "@iconify-json/ri": "^1.2.5",
+        "@types/nprogress": "^0.2.3",
+        "@unocss/preset-web-fonts": "^66.4.0",
+        "@unocss/preset-wind4": "^66.3.3",
+        "@unocss/reset": "^66.4.0",
+        "prettier": "3.6.2",
+        "prettier-plugin-astro": "0.14.1",
+        "prettier-plugin-tailwindcss": "^0.6.14",
+        "unocss": "^66.3.3"
+    }
 }

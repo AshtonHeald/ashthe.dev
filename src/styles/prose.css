@@ -1,9 +1,9 @@
 /* layer: typography */
 .prose {
-  color: var(--foreground);
-  max-width: 65ch;
-  font-size: 1rem;
-  line-height: 1.5;
+    color: var(--foreground);
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /*==================================================*/
@@ -13,45 +13,45 @@
 .prose h4,
 .prose h5,
 .prose h6 {
-  color: var(--foreground);
-  font-weight: 700;
-  line-height: 1.25;
+    color: var(--foreground);
+    font-weight: 700;
+    line-height: 1.25;
 }
 .prose h1 {
-  margin-top: 0;
-  margin-bottom: 0.8888889em;
-  font-size: 2.25em;
+    margin-top: 0;
+    margin-bottom: 0.8888889em;
+    font-size: 2.25em;
 }
 .prose h2 {
-  margin: 1.75em 0 0.5em;
-  font-size: 1.75em;
+    margin: 1.75em 0 0.5em;
+    font-size: 1.75em;
 }
 .prose h3 {
-  margin: 1.5em 0 0.5em;
-  font-size: 1.375em;
+    margin: 1.5em 0 0.5em;
+    font-size: 1.375em;
 }
 .prose h4 {
-  margin: 1em 0;
-  font-size: 1.125em;
+    margin: 1em 0;
+    font-size: 1.125em;
 }
 /*==================================================*/
 
 .prose a {
-  font-weight: inherit;
-  text-decoration: none;
-  border-bottom: 2px solid var(--border);
-  transition: border 0.25s ease-in-out;
+    font-weight: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid var(--border);
+    transition: border 0.25s ease-in-out;
 }
 
 .prose a:hover {
-  border-color: var(--foreground);
+    border-color: var(--foreground);
 }
 .prose .arrow-link a:hover {
-  border-color: var(--border);
+    border-color: var(--border);
 }
 
 .prose a code {
-  color: inherit;
+    color: inherit;
 }
 /*==================================================*/
 
@@ -59,152 +59,152 @@
 .prose ul,
 .prose ol,
 .prose pre {
-  margin: 10px 0;
-  line-height: 1.75;
+    margin: 10px 0;
+    line-height: 1.75;
 }
 .prose blockquote {
-  margin: 1em 0;
-  padding-left: 1em;
-  font-style: italic;
-  border-left: 0.25em solid var(--border);
+    margin: 1em 0;
+    padding-left: 1em;
+    font-style: italic;
+    border-left: 0.25em solid var(--border);
 }
 
 .prose img,
 .prose video {
-  max-width: 100%;
-  border-radius: 0.5rem;
-  margin-top: 1.5rem;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
 }
 
 p:has(img) {
-  margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
 }
 
 .prose small {
-  color: var(--accent-foreground);
+    color: var(--accent-foreground);
 }
 
 .prose figure,
 .prose picture {
-  margin: 1em 0;
+    margin: 1em 0;
 }
 .prose figcaption {
-  color: var(--un-prose-captions);
-  font-size: 0.875em;
+    color: var(--un-prose-captions);
+    font-size: 0.875em;
 }
 .prose code {
-  color: var(--un-prose-code);
-  font-size: 0.875em;
-  font-weight: 600;
-  font-family: undefined;
+    color: var(--un-prose-code);
+    font-size: 0.875em;
+    font-weight: 600;
+    font-family: undefined;
 }
 .prose :not(pre) > code::before,
 .prose :not(pre) > code::after {
-  content: "`";
+    content: "`";
 }
 .prose pre {
-  padding: 1.25rem 1.5rem;
-  overflow-x: auto;
-  border-radius: 0.375rem;
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    border-radius: 0.375rem;
 }
 .prose pre,
 .prose code {
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none;
-  background: transparent;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    background: transparent;
 }
 .prose pre code {
-  font-weight: inherit;
+    font-weight: inherit;
 }
 
 /*==================================================*/
 .prose ol,
 .prose ul {
-  padding-left: 1.25em;
+    padding-left: 1.25em;
 }
 .prose ol {
-  list-style-type: decimal;
+    list-style-type: decimal;
 }
 .prose ol[type="A"] {
-  list-style-type: upper-alpha;
+    list-style-type: upper-alpha;
 }
 .prose ol[type="a"] {
-  list-style-type: lower-alpha;
+    list-style-type: lower-alpha;
 }
 .prose ol[type="A" s] {
-  list-style-type: upper-alpha;
+    list-style-type: upper-alpha;
 }
 .prose ol[type="a" s] {
-  list-style-type: lower-alpha;
+    list-style-type: lower-alpha;
 }
 .prose ol[type="I"] {
-  list-style-type: upper-roman;
+    list-style-type: upper-roman;
 }
 .prose ol[type="i"] {
-  list-style-type: lower-roman;
+    list-style-type: lower-roman;
 }
 .prose ol[type="I" s] {
-  list-style-type: upper-roman;
+    list-style-type: upper-roman;
 }
 .prose ol[type="i" s] {
-  list-style-type: lower-roman;
+    list-style-type: lower-roman;
 }
 .prose ol[type="1"] {
-  list-style-type: decimal;
+    list-style-type: decimal;
 }
 .prose ul {
-  list-style-type: disc;
+    list-style-type: disc;
 }
 .prose ol > li::marker,
 .prose ul > li::marker,
 .prose summary::marker {
-  color: var(--un-prose-lists);
+    color: var(--un-prose-lists);
 }
 /*==================================================*/
 
 .prose hr {
-  margin: 2em 0;
-  /*border: 1px solid var(--border);*/
-  border: none;
+    margin: 2em 0;
+    /*border: 1px solid var(--border);*/
+    border: none;
 }
 .prose table {
-  display: block;
-  margin: 1em 0;
-  border-collapse: collapse;
-  overflow-x: auto;
+    display: block;
+    margin: 1em 0;
+    border-collapse: collapse;
+    overflow-x: auto;
 }
 .prose tr:nth-child(2n) {
-  background: var(--un-prose-bg-soft);
+    background: var(--un-prose-bg-soft);
 }
 .prose td,
 .prose th {
-  border: 1px solid var(--un-prose-borders);
-  padding: 0.625em 1em;
+    border: 1px solid var(--un-prose-borders);
+    padding: 0.625em 1em;
 }
 .prose abbr {
-  cursor: help;
+    cursor: help;
 }
 .prose kbd {
-  color: var(--un-prose-code);
-  border: 1px solid;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875em;
-  border-radius: 0.25rem;
+    color: var(--un-prose-code);
+    border: 1px solid;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875em;
+    border-radius: 0.25rem;
 }
 .prose details {
-  margin: 1em 0;
-  padding: 1.25rem 1.5rem;
-  background: var(--un-prose-bg-soft);
+    margin: 1em 0;
+    padding: 1.25rem 1.5rem;
+    background: var(--un-prose-bg-soft);
 }
 .prose summary {
-  cursor: pointer;
-  font-weight: 600;
+    cursor: pointer;
+    font-weight: 600;
 }

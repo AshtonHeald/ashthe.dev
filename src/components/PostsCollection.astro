@@ -9,34 +9,37 @@ const allPosts = await getCollection("posts");
 
 // Sort first, then map to avoid reprocessing during sorting
 const postsWithReadingTime = allPosts
-  .sort((a, b) => (a.data.pubDate < b.data.pubDate ? 1 : -1)) // latest first
-  .map((post) => {
-    const tree = fromMarkdown(String(post.body));
-    const textOnPage = toString(tree);
-    const readingTime = getReadingTime(textOnPage);
-    const shortText = readingTime.text.replace(" read", "");
-    return { ...post, minutesRead: shortText };
-  });
+    .sort((a, b) => (a.data.pubDate < b.data.pubDate ? 1 : -1)) // latest first
+    .map((post) => {
+        const tree = fromMarkdown(String(post.body));
+        const textOnPage = toString(tree);
+        const readingTime = getReadingTime(textOnPage);
+        const shortText = readingTime.text.replace(" read", "");
+        return { ...post, minutesRead: shortText };
+    });
 ---
 
 <ul class="!list-none space-y-4 !pl-0">
-  {
-    postsWithReadingTime.map((post) => (
-      <li>
-        <a
-          class="!border-b-0 transition-all hover:opacity-60"
-          href={`/writing/${post.id}`}
-        >
-          <span class="pr-2">{post.data.title}</span>
-          <span class="text-muted-foreground text-sm">
-            <time datetime={post.data.pubDate.toISOString()}>
-              {formatDate(post.data.pubDate, { month: true, day: true })}
-            </time>
-            {" · "}
-            {post.minutesRead}
-          </span>
-        </a>
-      </li>
-    ))
-  }
+    {
+        postsWithReadingTime.map((post) => (
+            <li>
+                <a
+                    class="!border-b-0 transition-all hover:opacity-60"
+                    href={`/writing/${post.id}`}
+                >
+                    <span class="pr-2">{post.data.title}</span>
+                    <span class="text-muted-foreground text-sm">
+                        <time datetime={post.data.pubDate.toISOString()}>
+                            {formatDate(post.data.pubDate, {
+                                month: true,
+                                day: true,
+                            })}
+                        </time>
+                        {" · "}
+                        {post.minutesRead}
+                    </span>
+                </a>
+            </li>
+        ))
+    }
 </ul>

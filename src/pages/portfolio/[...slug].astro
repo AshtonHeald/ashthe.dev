@@ -5,54 +5,54 @@ import Badge from "@/components/Badge.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects");
-  return projects.map((project) => ({
-    params: { slug: project.id },
-    props: project,
-  }));
+    const projects = await getCollection("projects");
+    return projects.map((project) => ({
+        params: { slug: project.id },
+        props: project,
+    }));
 }
 const project = Astro.props;
 const { Content } = await render(project);
 ---
 
 <MainLayout>
-  <article class="prose mx-auto">
-    <h1 class="!mb4">{project.data.name}</h1>
-    <p>{project.data.desc}</p>
-    <SectionHeading>Built With</SectionHeading>
-    <div class="gap2 flex flex-wrap">
-      {project.data.tech.map((techItem) => <Badge>{techItem}</Badge>)}
-    </div>
-    <SectionHeading>Links</SectionHeading>
-    <div class="mt-2.5 space-x-3 text-sm">
-      {
-        project.data.demo && (
-          <a
-            href={project.data.demo}
-            rel="noopener noreferrer"
-            target="_blank"
-            class="inline-flex items-center gap-1"
-          >
-            <span class="i-ri-macbook-line" />
-            View Live
-          </a>
-        )
-      }
-      {
-        project.data.repo && (
-          <a
-            href={project.data.repo}
-            rel="noopener noreferrer"
-            target="_blank"
-            class="inline-flex items-center gap-1"
-          >
-            <span class="i-ri-github-line" />
-            Source Code
-          </a>
-        )
-      }
-    </div>
-    <Content />
-    <hr />
-  </article>
+    <article class="prose mx-auto">
+        <h1 class="!mb4">{project.data.name}</h1>
+        <p>{project.data.desc}</p>
+        <SectionHeading>Built With</SectionHeading>
+        <div class="gap2 flex flex-wrap">
+            {project.data.tech.map((techItem) => <Badge>{techItem}</Badge>)}
+        </div>
+        <SectionHeading>Links</SectionHeading>
+        <div class="mt-2.5 space-x-3 text-sm">
+            {
+                project.data.demo && (
+                    <a
+                        href={project.data.demo}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="inline-flex items-center gap-1"
+                    >
+                        <span class="i-ri-macbook-line" />
+                        View Live
+                    </a>
+                )
+            }
+            {
+                project.data.repo && (
+                    <a
+                        href={project.data.repo}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        class="inline-flex items-center gap-1"
+                    >
+                        <span class="i-ri-github-line" />
+                        Source Code
+                    </a>
+                )
+            }
+        </div>
+        <Content />
+        <hr />
+    </article>
 </MainLayout>
