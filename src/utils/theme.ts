@@ -4,8 +4,9 @@ import { nextTick } from "vue";
 export const isDark = useDark();
 
 export function toggleDark(event: MouseEvent) {
+    // @ts-expect-error experimental API
     const isAppearanceTransition =
-        document.startViewTransition() &&
+        document.startViewTransition &&
         !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (!isAppearanceTransition) {
