@@ -7,10 +7,6 @@ tags:
     - "fundamentals"
 ---
 
-React is one of the most widely used JavaScript libraries for building user interfaces, especially for web applications. In this series, we’ll cover the core concepts that form the foundation of React development. In Part One, we’ll start with the basics.
-
----
-
 ### What is React?
 
 React is an open-source JavaScript library developed by Facebook for building fast, interactive user interfaces. It allows developers to create reusable UI components and manage the state of an application efficiently.
