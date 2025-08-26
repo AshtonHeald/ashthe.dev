@@ -1,6 +1,7 @@
 ---
 import ToggleTheme from "./ToggleTheme.vue";
 const currentPath = Astro.url.pathname;
+import Logo from "../assets/logo.svg";
 
 const navLinks = [
     { href: "/", text: "Home", icon: "i-ri-home-4-line" },
@@ -24,8 +25,12 @@ const iconMenu = [
 ];
 ---
 
-<header class="flex items-center justify-center p-4 md:p-8">
-    <a href="/" class="font-cursive text-accent-foreground text-4xl">agh</a>
+<header
+    class="flex h-[72px] items-center justify-center p-4 md:h-[104px] md:p-8"
+>
+    <Logo
+        class="text-accent-foreground absolute left-2 h-[50px] w-[50px] md:left-6"
+    />
     <nav class="ml-auto">
         <ul class="flex gap-5">
             {
