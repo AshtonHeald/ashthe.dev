@@ -24,10 +24,10 @@ const recentPosts = allPosts
         recentPosts.map((post) => (
             <li>
                 <a
-                    class="flex items-center gap-2 !border-b-0 !transition-all hover:opacity-60"
+                    class="!border-b-0 !transition-all hover:opacity-60"
                     href={`/posts/${post.id}`}
                 >
-                    <span>{post.data.title}</span>
+                    <span class="pr-2">{post.data.title}</span>
                     <span class="text-muted-foreground text-sm">
                         <time datetime={post.data.pubDate.toISOString()}>
                             {formatDate(post.data.pubDate, {

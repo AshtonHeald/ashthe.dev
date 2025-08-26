@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import MainLayout from "@/layouts/MainLayout.astro";
+import { formatDate } from "@/utils/formatDate";
 
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
@@ -15,8 +16,21 @@ const { Content, remarkPluginFrontmatter } = await render(post);
 
 <MainLayout>
     <article class="prose mx-auto">
-        <h1>{post.data.title}</h1>
-        <p>{remarkPluginFrontmatter.minutesRead}</p>
+        <h1 class="!mb-4">{post.data.title}</h1>
+        <span class="text-muted-foreground text-sm">
+            <time datetime={post.data.pubDate.toISOString()}>
+                {
+                    formatDate(post.data.pubDate, {
+                        month: true,
+                        day: true,
+                        year: true,
+                    })
+                }
+            </time>
+            {" · "}
+            {remarkPluginFrontmatter.minutesRead} read
+        </span>
+        <hr />
         <Content />
     </article>
 </MainLayout>
