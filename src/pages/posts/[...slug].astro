@@ -2,6 +2,8 @@
 import { getCollection, render } from "astro:content";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { formatDate } from "@/utils/formatDate";
+import Spacer from "@/components/spacer.astro";
+import ArrowLink from "@/components/ArrowLink.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
@@ -32,5 +34,9 @@ const { Content, remarkPluginFrontmatter } = await render(post);
         </span>
         <hr />
         <Content />
+        <Spacer />
+        <ArrowLink direction="left">
+            <a href="/posts">Back to posts</a>
+        </ArrowLink>
     </article>
 </MainLayout>
