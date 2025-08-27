@@ -3,6 +3,8 @@ import { getCollection, render } from "astro:content";
 import MainLayout from "@/layouts/MainLayout.astro";
 import Badge from "@/components/Badge.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
+import Spacer from "@/components/spacer.astro";
+import ArrowLink from "@/components/ArrowLink.astro";
 
 export async function getStaticPaths() {
     const projects = await getCollection("projects");
@@ -53,6 +55,9 @@ const { Content } = await render(project);
             }
         </div>
         <Content />
-        <hr />
+        <Spacer />
+        <ArrowLink direction="left">
+            <a href="/portfolio">Back to projects</a>
+        </ArrowLink>
     </article>
 </MainLayout>

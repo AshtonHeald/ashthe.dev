@@ -1,4 +1,19 @@
-<span class="arrow-link text-accent-foreground text-sm">
+---
+const { direction = "right" } = Astro.props; // default to 'right'
+---
+
+<span
+    class="arrow-link text-accent-foreground flex w-fit items-center gap-1 text-sm"
+>
+    {
+        direction === "left" && (
+            <div class="i-ri-arrow-left-long-line bg-accent-foreground text-xs" />
+        )
+    }
     <slot />
-    <div class="i-ri-arrow-right-long-line bg-accent-foreground text-xs"></div>
+    {
+        direction === "right" && (
+            <div class="i-ri-arrow-right-long-line bg-accent-foreground text-xs" />
+        )
+    }
 </span>
