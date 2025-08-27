@@ -1,20 +1,12 @@
-[ashtonheald.me](https://ashtionheald.me)
+[ashthe.dev](https://ashthe.dev)
 
-My personal developer website to showcase me as a developer
+My developer website.
 
-Features
+<br>
 
-- Landing Page
-- About
-- Portfolio
-- Technical Blog
+Inspired by [Anthony Fu](https://antfu.me/)
 
-Tech Stack
+<br>
 
-- Astro
-- Vue
-- TypeScript
-- UnoCSS
-
-code is licensed under [MIT](./LICENSE),
-words and images are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Code is licensed under [MIT](./LICENSE)  
+Words are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
