@@ -175,6 +175,16 @@ p:has(img) {
     /*border: 1px solid var(--border);*/
     border: none;
 }
+table img {
+    margin-top: 0 !important;
+}
+.prose td,
+.prose th {
+    border: 1px solid var(--un-prose-borders);
+    padding: 0.5em;
+}
+
+/*
 .prose table {
     display: block;
     margin: 1em 0;
@@ -189,6 +199,8 @@ p:has(img) {
     border: 1px solid var(--un-prose-borders);
     padding: 0.625em 1em;
 }
+*/
+
 .prose abbr {
     cursor: help;
 }
