@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 const allProjects = await getCollection("projects");
 const { collectionFilter } = Astro.props;
+
+import Badge from "@/components/Badge.astro";
 ---
 
 <ul class="!list-none space-y-4 !pl-0">
@@ -12,11 +14,16 @@ const { collectionFilter } = Astro.props;
             .map((project) => (
                 <li>
                     <a
-                        class="!border-b-0 !transition-all hover:opacity-60"
+                        class="block w-fit !border-b-0 !transition-all hover:opacity-60"
                         href={`/portfolio/${project.id}`}
                     >
                         <div>
-                            <span>{project.data.name}</span>
+                            <div>
+                                <span>{project.data.name}</span>
+                                <Badge>{project.data.tech[0]}</Badge>
+                                <Badge>{project.data.year}</Badge>
+                                <Badge>{project.data.stat}</Badge>
+                            </div>
                             <div class="text-accent-foreground text-sm">
                                 {project.data.desc}
                             </div>
