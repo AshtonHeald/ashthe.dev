@@ -5,14 +5,17 @@ import { getCollection, render } from "astro:content";
 export async function getStaticPaths() {
     const pages = await getCollection("pages");
     return pages.map((page) => ({
-        params: {
-            page: page.id,
-        },
+        params: { page: page.id },
         props: { page },
     }));
 }
 
 const { page } = Astro.props;
+
+if (!page) {
+    return Astro.rewrite("/404");
+}
+
 const { Content } = await render(page);
 ---
 
