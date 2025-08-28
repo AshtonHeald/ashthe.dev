@@ -13,6 +13,7 @@ import UnoCSS from "unocss/astro";
 export default defineConfig({
     site: "https://ashthe.dev",
     base: "/",
+    trailingSlash: "never",
     experimental: {
         fonts: [
             {
