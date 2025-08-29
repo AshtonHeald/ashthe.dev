@@ -52,19 +52,40 @@ import { ClientRouter } from "astro:transitions";
 
 <ClientRouter />
 
-<!-- Open Graph / Facebook -->
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://ashthe.dev" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<!--  <meta property="og:image" content={new URL(image.src, Astro.url)} />-->
+<meta
+    property="og:title"
+    content="Ashton G. Heald - Developer Portfolio & Technical Blog"
+/>
+<meta
+    property="og:description"
+    content="Ash is a front-end developer specializing in the JavaScript ecosystem."
+/>
+<meta
+    property="og:image"
+    content="https://opengraph.b-cdn.net/production/images/eea5b901-da06-4c0a-96d9-70feb35ea4cd.png?token=iGN2stei1ANCRRbWh5b7zCmLOyXkOH2orv2PA591yzY&height=630&width=1200&expires=33292412807"
+/>
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<!-- <meta property="twitter:image" content={new URL(image.src, Astro.url)} />-->
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="ashthe.dev" />
+<meta property="twitter:url" content="https://ashthe.dev" />
+<meta
+    name="twitter:title"
+    content="Ashton G. Heald - Developer Portfolio & Technical Blog"
+/>
+<meta
+    name="twitter:description"
+    content="Ash is a front-end developer specializing in the JavaScript ecosystem."
+/>
+<meta
+    name="twitter:image"
+    content="https://opengraph.b-cdn.net/production/images/eea5b901-da06-4c0a-96d9-70feb35ea4cd.png?token=iGN2stei1ANCRRbWh5b7zCmLOyXkOH2orv2PA591yzY&height=630&width=1200&expires=33292412807"
+/>
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
 
 <Font cssVariable="--font-inter" preload />
 <Font cssVariable="--font-playfair-display" preload />
