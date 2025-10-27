@@ -14,11 +14,11 @@
     --border: #d4d4d4;
     --input: #d4d4d4;
     --ring: #a3a3a3;
-
     --font-sans: var(--font-inter), serif !important;
     --font-serif: var(--font-playfair-display), serif !important;
     --font-mono: var(--font-roboto-mono), monospace !important;
     --font-cursive: var(--font-sacramento), cursive !important;
+    color-scheme: light dark;
 }
 html.dark {
     --background: #0a0a0a;
@@ -34,6 +34,7 @@ html.dark {
     --border: #404040;
     --input: #404040;
     --ring: #525252;
+    color-scheme: dark;
 }
 
 .font-cursive {
