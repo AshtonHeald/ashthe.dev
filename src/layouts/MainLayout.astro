@@ -11,14 +11,12 @@ import "@/styles/main.css";
 <html lang="en">
     <head>
         <BaseHead title={title} description={description} />
-        <!--
-        <script
-        type="text/partytown"
-        defer
-        src="https://cloud.umami.is/script.js"
-        data-website-id="22bfb4c7-8ee4-4e27-b54a-33a8c570ac90"></script>
-        -->
 
+        <script
+            type="text/partytown"
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id="22bfb4c7-8ee4-4e27-b54a-33a8c570ac90"></script>
         <script is:inline>
             function applyTheme(doc) {
                 const stored = localStorage.getItem("vueuse-color-scheme");
